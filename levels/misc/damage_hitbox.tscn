@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://csd3i5081fgoc"]
+
+[ext_resource type="Script" uid="uid://c6qqlvfiqaxd1" path="res://levels/misc/damage_hitbox.gd" id="1_u02s1"]
+
+[node name="DamageHitbox" type="Area2D"]
+script = ExtResource("1_u02s1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
