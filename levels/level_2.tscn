@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://dxvjklnk3gamj"]
+[gd_scene load_steps=19 format=4 uid="uid://dxvjklnk3gamj"]
 
 [ext_resource type="Script" uid="uid://blbjmppr08yfd" path="res://levels/level_0.gd" id="1_ep78u"]
 [ext_resource type="Texture2D" uid="uid://ncewu1oqp1i5" path="res://sprites/border_block.png" id="2_dfjjl"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b8w66kvgjxfsi" path="res://objects/exit.tscn" id="5_vm7no"]
 [ext_resource type="PackedScene" uid="uid://ca238t83f8pxa" path="res://objects/spike.tscn" id="6_hbb88"]
 [ext_resource type="PackedScene" uid="uid://b0p1rmvs0diwl" path="res://player/player.tscn" id="7_wcjpl"]
+[ext_resource type="PackedScene" uid="uid://bpuvm3765eh5r" path="res://GUI/level_complete.tscn" id="8_dfjjl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ep78u"]
 texture = ExtResource("2_dfjjl")
@@ -129,6 +130,67 @@ scenes/1/scene = ExtResource("5_vm7no")
 tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetScenesCollectionSource_hbb88")
 
+[sub_resource type="Animation" id="Animation_l53as"]
+resource_name = "transition"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Level Complete:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Level Complete/ColorRect2:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3sk1a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Level Complete:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Level Complete/ColorRect2:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3sk1a"]
+_data = {
+&"RESET": SubResource("Animation_3sk1a"),
+&"transition": SubResource("Animation_l53as")
+}
+
 [node name="Level_2" type="Node"]
 script = ExtResource("1_ep78u")
 next_scene = "C:/Godot/Godot Projects/hc-platformer/levels/level_3.tscn"
@@ -156,3 +218,19 @@ tile_set = SubResource("TileSet_wcjpl")
 
 [node name="Player" parent="." instance=ExtResource("7_wcjpl")]
 position = Vector2(30, 416)
+
+[node name="Level Complete" parent="." instance=ExtResource("8_dfjjl")]
+
+[node name="ColorRect2" type="ColorRect" parent="Level Complete"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3sk1a")
+}

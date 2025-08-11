@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="HC Platformer"
-run/main_scene="uid://m1hns6mmq7v8"
+run/main_scene="uid://dui6sa80214ui"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
