@@ -15,6 +15,8 @@ func _process(delta):
 
 
 func _on_body_entered(body):
+	if is_on:
+		return
 	if body is Player:
 		sprite.frame = 1
 		is_on = true

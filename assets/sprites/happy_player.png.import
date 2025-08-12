@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ncewu1oqp1i5"
-path="res://.godot/imported/border_block.png-653104df79dff603119b680efb2da0e5.ctex"
+uid="uid://bg2s41id6pxpf"
+path="res://.godot/imported/happy_player.png-7b0b10e361873ef05961c8412921dde2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/border_block.png"
-dest_files=["res://.godot/imported/border_block.png-653104df79dff603119b680efb2da0e5.ctex"]
+source_file="res://assets/sprites/happy_player.png"
+dest_files=["res://.godot/imported/happy_player.png-7b0b10e361873ef05961c8412921dde2.ctex"]
 
 [params]
 

@@ -1,6 +1,7 @@
 extends Area2D
 
 @onready var sprite = $AnimatedSprite2D
+@onready var exit_sound = $ExitSound
 
 var unlocked: bool = false
 
@@ -18,6 +19,7 @@ func _process(delta):
 func _on_exit_open():
 	unlocked = true
 	sprite.frame = 1
+	exit_sound.play()
 
 func _on_body_entered(body):
 	if body is not Player:

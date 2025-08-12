@@ -1,9 +1,9 @@
 [gd_scene load_steps=15 format=4 uid="uid://m1hns6mmq7v8"]
 
-[ext_resource type="Texture2D" uid="uid://ncewu1oqp1i5" path="res://sprites/border_block.png" id="1_eus5j"]
+[ext_resource type="Texture2D" uid="uid://ncewu1oqp1i5" path="res://assets/sprites/border_block.png" id="1_eus5j"]
 [ext_resource type="Script" uid="uid://blbjmppr08yfd" path="res://levels/level_0.gd" id="1_iss0w"]
 [ext_resource type="PackedScene" uid="uid://b0p1rmvs0diwl" path="res://player/player.tscn" id="2_823pn"]
-[ext_resource type="Texture2D" uid="uid://cueg2jh6nwo1o" path="res://sprites/tiles.png" id="4_jum3j"]
+[ext_resource type="Texture2D" uid="uid://cueg2jh6nwo1o" path="res://assets/sprites/tiles.png" id="4_jum3j"]
 [ext_resource type="PackedScene" uid="uid://gv0piocxfbri" path="res://objects/button.tscn" id="5_7d3si"]
 [ext_resource type="PackedScene" uid="uid://ca238t83f8pxa" path="res://objects/spike.tscn" id="6_7d3si"]
 [ext_resource type="PackedScene" uid="uid://b8w66kvgjxfsi" path="res://objects/exit.tscn" id="6_jum3j"]

@@ -18,6 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 Eventsbus="*res://utils/eventsbus.gd"
+BgMusic="*res://objects/bg_music.tscn"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 

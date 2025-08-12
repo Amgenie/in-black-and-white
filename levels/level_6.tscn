@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://p04i7xytewkv"]
+
+[ext_resource type="FontFile" uid="uid://bhao5dks31b0u" path="res://GUI/Kenney Pixel.ttf" id="1_6up2b"]
+[ext_resource type="Texture2D" uid="uid://bg2s41id6pxpf" path="res://assets/sprites/happy_player.png" id="2_vflpa"]
+
+[node name="level_6" type="Node"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="EndText" type="RichTextLabel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_6up2b")
+theme_override_font_sizes/normal_font_size = 170
+bbcode_enabled = true
+text = "You finished the game! Good job!
+
+[font_size={120}] I hope you enjoyed this simple game : )"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(567, 336)
+texture = ExtResource("2_vflpa")
